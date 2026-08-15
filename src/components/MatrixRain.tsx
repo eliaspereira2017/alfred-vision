@@ -31,7 +31,10 @@ export function MatrixRain() {
       const context = c.getContext("2d");
       if (!context) return;
       
-      const currentColumns = Math.floor(window.innerWidth / fontSize);
+      const currentWidth = window.innerWidth;
+      const currentHeight = window.innerHeight;
+      
+      const currentColumns = Math.floor(currentWidth / fontSize);
       if (currentColumns !== columns) {
         columns = currentColumns;
         drops = Array(columns).fill(1);
@@ -51,12 +54,14 @@ export function MatrixRain() {
           context.fillStyle = "#006622";
         }
 
-        context.fillText(text, i * fontSize, drops[i] * fontSize);
+        context.fillText(text, i * fontSize, (drops[i] ?? 0) * fontSize);
 
-        if (drops[i] * fontSize > c.height && Math.random() > 0.975) {
+        if ((drops[i] ?? 0) * fontSize > currentHeight && Math.random() > 0.975) {
           drops[i] = 0;
         }
-        drops[i]++;
+        if (drops[i] !== undefined) {
+          drops[i]++;
+        }
       }
     };
 
