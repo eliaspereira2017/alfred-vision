@@ -7,8 +7,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "ALFRED VISION | Seu Assistente de IA Personalizado" },
       { name: "description", content: "Crie um assistente de IA que interage com você como nos filmes. Visão computacional, automação de tela e controle por voz." },
-      { property: "og:title", content: "ALFRED VISION" },
-      { property: "og:description", content: "O assistente de IA que enxerga e automatiza seu computador." },
+      { property: "og:title", content: "ALFRED VISION | Seu Assistente de IA Personalizado" },
+      { property: "og:description", content: "Crie um assistente de IA que interage com você como nos filmes. Visão computacional, automação de tela e controle por voz." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
