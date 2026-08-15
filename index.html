@@ -254,13 +254,23 @@
             ctx.fillStyle = 'rgba(10, 10, 10, 0.1)';
             ctx.fillRect(0, 0, width, height);
             
-            // Matrix character color with potential variation
-231:             ctx.fillStyle = '#00ff66';
             ctx.font = fontSize + 'px monospace';
             
             for (let i = 0; i < drops.length; i++) {
                 const text = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                const xPos = i * fontSize;
+                
+                // Concentrar efeito nas bordas (fora dos 900px centrais)
+                const marginWidth = (width - 900) / 2;
+                const isSide = xPos < marginWidth || xPos > (width - marginWidth);
+                
+                if (isSide) {
+                    ctx.fillStyle = '#00ff66';
+                } else {
+                    ctx.fillStyle = 'rgba(0, 255, 102, 0.05)';
+                }
+                
+                ctx.fillText(text, xPos, drops[i] * fontSize);
                 
                 if (drops[i] * fontSize > height && Math.random() > 0.975) {
                     drops[i] = 0;

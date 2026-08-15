@@ -40,23 +40,28 @@ export function MatrixRain() {
         drops = Array(columns).fill(1);
       }
 
-      context.fillStyle = "rgba(0, 0, 0, 0.05)";
+      context.fillStyle = "rgba(10, 10, 10, 0.1)";
       context.fillRect(0, 0, c.width, c.height);
 
       context.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
         const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        const xPos = i * fontSize;
         
-        if (Math.random() > 0.95) {
+        // Concentrar efeito nas bordas (fora dos 900px centrais)
+        const marginWidth = (currentWidth - 900) / 2;
+        const isSide = xPos < marginWidth || xPos > (currentWidth - marginWidth);
+
+        if (isSide) {
           context.fillStyle = "#00ff66";
         } else {
-          context.fillStyle = "#006622";
+          context.fillStyle = "rgba(0, 255, 102, 0.05)";
         }
 
         const dropY = drops[i];
         if (dropY !== undefined) {
-          context.fillText(text, i * fontSize, dropY * fontSize);
+          context.fillText(text, xPos, dropY * fontSize);
 
           if (dropY * fontSize > currentHeight && Math.random() > 0.975) {
             drops[i] = 0;
