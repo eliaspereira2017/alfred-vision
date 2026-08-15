@@ -196,6 +196,15 @@
     </div>
 
     <script>
+        // Ensure page loads at top
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
         
