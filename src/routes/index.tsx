@@ -97,7 +97,7 @@ function Index() {
             <a href="#oferta" className="hover:text-[#00ff66] transition-colors">Oferta</a>
             <a href="#faq" className="hover:text-[#00ff66] transition-colors">FAQ</a>
           </div>
-          <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="bg-[#00ff66]/10 border border-[#00ff66] text-[#00ff66] px-6 py-2 rounded-full hover:bg-[#00ff66] hover:text-black transition-all font-bold text-sm">
+          <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-b from-transparent to-black border border-[#00ff66] text-[#00ff66] px-4 py-1.5 rounded-full hover:from-[#00ff66] hover:to-[#006629] hover:text-black transition-all font-bold text-[10px] uppercase">
             QUERO O MEU
           </a>
         </div>
