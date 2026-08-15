@@ -206,7 +206,7 @@ function Index() {
             href={ctaLink} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="w-auto inline-block bg-gradient-to-b from-[#00ff66] to-[#006629] text-black font-black text-[10px] px-6 py-2.5 rounded-2xl hover:shadow-[0_0_50px_rgba(0,255,102,0.6)] transition-all transform hover:scale-105 uppercase"
+            className="w-auto inline-block bg-gradient-to-b from-[#00ff66] to-[#006629] text-black font-black text-[8px] px-4 py-1.5 rounded-2xl hover:shadow-[0_0_50px_rgba(0,255,102,0.6)] transition-all transform hover:scale-105 uppercase"
           >
             GARANTIR MINHA VAGA AGORA
           </a>
