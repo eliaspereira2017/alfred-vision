@@ -187,24 +187,24 @@ function Index() {
       </section>
 
       {/* Oferta */}
-      <section id="oferta" className="py-24 container mx-auto px-6 text-center relative z-10">
-        <div className="max-w-4xl mx-auto bg-gradient-to-b from-[#111] to-black border-2 border-[#00ff66] p-6 md:p-10 rounded-[3rem] shadow-[0_0_60px_rgba(0,255,102,0.15)]">
-          <span className="text-[#00ff66] font-bold tracking-[0.3em] uppercase mb-4 block text-[10px]">Oferta Exclusiva</span>
-          <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tighter">ACESSO VITALÍCIO</h2>
-          <p className="text-gray-400 text-base mb-8">Inclui 6 videoaulas práticas, suporte exclusivo e garantia total.</p>
+      <section id="oferta" className="py-12 container mx-auto px-6 text-center relative z-10">
+        <div className="max-w-xl mx-auto bg-gradient-to-b from-[#111] to-black border-2 border-[#00ff66] p-6 md:p-8 rounded-[2.5rem] shadow-[0_0_60px_rgba(0,255,102,0.15)]">
+          <span className="text-[#00ff66] font-bold tracking-[0.3em] uppercase mb-3 block text-[8px]">Oferta Exclusiva</span>
+          <h2 className="text-2xl md:text-4xl font-black mb-3 tracking-tighter">ACESSO VITALÍCIO</h2>
+          <p className="text-gray-400 text-sm mb-6">Inclui 6 videoaulas práticas, suporte exclusivo e garantia total.</p>
           
-          <div className="mb-8">
-            <p className="text-gray-500 line-through text-lg mb-1 font-bold italic">De R$ 399,00</p>
-            <p className="text-xl text-white mb-2 uppercase tracking-widest">Por apenas</p>
-            <p className="text-5xl md:text-7xl font-black text-[#00ff66]">12x R$ 20,37</p>
-            <p className="text-lg text-gray-400 mt-2 font-bold uppercase tracking-widest">ou R$ 197,00 à vista</p>
+          <div className="mb-6">
+            <p className="text-gray-500 line-through text-base mb-1 font-bold italic">De R$ 399,00</p>
+            <p className="text-lg text-white mb-1 uppercase tracking-widest">Por apenas</p>
+            <p className="text-4xl md:text-6xl font-black text-[#00ff66]">12x R$ 20,37</p>
+            <p className="text-base text-gray-400 mt-2 font-bold uppercase tracking-widest">ou R$ 197,00 à vista</p>
           </div>
 
           <a 
             href={ctaLink} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="w-auto inline-block bg-gradient-to-b from-[#00ff66] to-[#006629] text-black font-black text-[8px] px-4 py-1.5 rounded-2xl hover:shadow-[0_0_50px_rgba(0,255,102,0.6)] transition-all transform hover:scale-105 uppercase"
+            className="w-auto inline-block bg-gradient-to-b from-[#00ff66] to-[#006629] text-black font-black text-[12px] px-8 py-3 rounded-2xl hover:shadow-[0_0_50px_rgba(0,255,102,0.6)] transition-all transform hover:scale-105 uppercase"
           >
             GARANTIR MINHA VAGA AGORA
           </a>
