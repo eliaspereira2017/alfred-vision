@@ -30,21 +30,21 @@
         @layer base {
             html { scroll-behavior: smooth; }
             body { 
-                @apply bg-bg-dark text-white font-sans;
-                letter-spacing: -0.02em;
+                @apply bg-bg-dark text-white font-sans text-sm;
+                letter-spacing: -0.01em;
             }
             #lovable-badge { display: none !important; }
         }
 
         @layer components {
             .btn-neon {
-                @apply inline-block bg-neon text-black font-black uppercase px-8 py-4 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(0,255,102,0.3)] hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,102,0.6)] cursor-pointer no-underline text-center;
+                @apply inline-block bg-neon text-black font-black uppercase px-5 py-2.5 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(0,255,102,0.2)] hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,102,0.4)] cursor-pointer no-underline text-center text-xs;
             }
             .glass-card {
-                @apply bg-black/40 border border-neon/20 backdrop-blur-md rounded-[2rem] p-8 transition-all duration-300 hover:border-neon/50 hover:shadow-[0_0_30px_rgba(0,255,102,0.1)];
+                @apply bg-black/40 border border-neon/20 backdrop-blur-md rounded-2xl p-5 transition-all duration-300 hover:border-neon/50 hover:shadow-[0_0_20px_rgba(0,255,102,0.1)];
             }
             .compact-heading {
-                @apply font-black uppercase leading-[0.9] tracking-[-0.05em];
+                @apply font-black uppercase leading-[0.95] tracking-[-0.04em];
             }
         }
     </style>
