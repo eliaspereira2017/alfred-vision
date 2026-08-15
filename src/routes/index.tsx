@@ -21,12 +21,60 @@ function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const features = [
-    { title: "Visão Computacional", desc: "Identifica objetos, pessoas e ações em tempo real através da sua câmera." },
-    { title: "Interpretação de Tela", desc: "Analisa o que está acontecendo na sua tela para automação inteligente." },
-    { title: "Conversação e Escrita", desc: "Interage via voz ou texto com naturalidade e contexto avançado." },
-    { title: "Casa Inteligente", desc: "Controle luzes, ar-condicionado e dispositivos IoT diretamente pelo Alfred via voz ou visão." },
-    { title: "Memória Persistente", desc: "Lembra das suas preferências e conversas anteriores para um serviço personalizado." },
-    { title: "Automação por Voz", desc: "Execute comandos complexos no Windows apenas falando." }
+    { 
+      title: "Visão Computacional", 
+      desc: "Identifica objetos, pessoas e comportamentos em tempo real para ações proativas e seguras.",
+      icon: (
+        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>
+        </svg>
+      )
+    },
+    { 
+      title: "Interpretação de Tela", 
+      desc: "O Alfred entende o que você está fazendo no PC e te auxilia em tarefas repetitivas ou complexas.",
+      icon: (
+        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+      )
+    },
+    { 
+      title: "Comandos de Voz", 
+      desc: "Dialogue com sua IA de forma fluida. Sem \"Ok Google\", apenas conversas como entre humanos.",
+      icon: (
+        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/>
+        </svg>
+      )
+    },
+    { 
+      title: "Memória Cognitiva", 
+      desc: "Ele lembra das suas preferências, projetos e conversas passadas para um auxílio verdadeiramente único.",
+      icon: (
+        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1 0-4.88 2.5 2.5 0 0 1 0-4.88A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 0-4.88 2.5 2.5 0 0 0 0-4.88A2.5 2.5 0 0 0 14.5 2Z"/>
+        </svg>
+      )
+    },
+    { 
+      title: "Automação No-Code", 
+      desc: "Configure fluxos de trabalho poderosos arrastando blocos. Do Windows à sua Cafeteira.",
+      icon: (
+        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+        </svg>
+      )
+    },
+    { 
+      title: "Privacidade Total", 
+      desc: "Seus dados são seus. Configure sua IA para rodar localmente ou com criptografia de ponta.",
+      icon: (
+        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      )
+    }
   ];
 
   const faqs = [
@@ -49,7 +97,7 @@ function Index() {
             <a href="#oferta" className="hover:text-[#00ff66] transition-colors">Oferta</a>
             <a href="#faq" className="hover:text-[#00ff66] transition-colors">FAQ</a>
           </div>
-          <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="bg-[#00ff66]/10 border border-[#00ff66] text-[#00ff66] px-6 py-2 rounded-full hover:bg-[#00ff66] hover:text-black transition-all font-bold text-sm">
+          <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-b from-transparent to-black border border-[#00ff66] text-[#00ff66] px-4 py-1.5 rounded-full hover:from-[#00ff66] hover:to-[#006629] hover:text-black transition-all font-bold text-[10px] uppercase">
             QUERO O MEU
           </a>
         </div>
@@ -110,13 +158,13 @@ function Index() {
                 </li>
               </ul>
             </div>
-            <div className="md:w-1/2 bg-[#111] border border-[#00ff66]/30 p-8 rounded-3xl shadow-[0_0_40px_rgba(0,255,102,0.1)]">
-              <div className="aspect-video bg-black/50 rounded-xl flex items-center justify-center border border-dashed border-[#00ff66]/20">
-                <div className="text-center">
-                  <div className="text-[#00ff66] text-4xl mb-4">🏠</div>
-                  <p className="text-sm font-bold uppercase tracking-widest text-gray-500">Visualização de Automação Residencial</p>
-                </div>
-              </div>
+            <div className="md:w-1/2 glass-card border-[#00ff66]/30 p-0 overflow-hidden relative group">
+              <img 
+                src="/__l5e/assets-v1/ef1f92d2-7f83-4200-b2aa-569cd7102e78/home-automation.png" 
+                alt="Dashboard Alfred" 
+                className="w-full h-auto block transition-all duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
             </div>
           </div>
         </div>
@@ -129,10 +177,10 @@ function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((f, i) => (
               <div key={i} className="bg-[#111] border border-[#00ff66]/20 p-8 rounded-2xl hover:border-[#00ff66] transition-all group">
-                <div className="w-12 h-12 bg-[#00ff66]/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#00ff66] transition-colors">
-                  <div className="w-6 h-6 border-2 border-[#00ff66] group-hover:border-black"></div>
+                <div className="text-[#00ff66] mb-6 group-hover:scale-110 transition-transform">
+                  {f.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-[#00ff66]">{f.title}</h3>
+                <h3 className="text-xl font-bold mb-4 bg-gradient-to-b from-[#00ff66] to-[#006629] bg-clip-text text-transparent uppercase tracking-tighter">{f.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{f.desc}</p>
               </div>
             ))}
@@ -158,7 +206,7 @@ function Index() {
             href={ctaLink} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="w-full md:w-auto inline-block bg-[#00ff66] text-black font-black text-2xl px-16 py-8 rounded-2xl hover:shadow-[0_0_50px_rgba(0,255,102,0.6)] transition-all transform hover:scale-105 uppercase"
+            className="w-full md:w-auto inline-block bg-gradient-to-b from-[#00ff66] to-[#006629] text-black font-black text-xs px-8 py-3.5 rounded-2xl hover:shadow-[0_0_50px_rgba(0,255,102,0.6)] transition-all transform hover:scale-105 uppercase"
           >
             GARANTIR MINHA VAGA AGORA
           </a>
