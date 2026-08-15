@@ -11,10 +11,10 @@ export function MatrixRain() {
     if (!ctx) return;
 
     const updateSize = () => {
-      const currentCanvas = canvasRef.current;
-      if (!currentCanvas) return;
-      currentCanvas.width = window.innerWidth;
-      currentCanvas.height = window.innerHeight;
+      const c = canvasRef.current;
+      if (!c) return;
+      c.width = window.innerWidth;
+      c.height = window.innerHeight;
     };
 
     updateSize();
@@ -26,10 +26,10 @@ export function MatrixRain() {
     let drops: number[] = Array(columns).fill(1);
 
     const draw = () => {
-      const currentCanvas = canvasRef.current;
-      const currentCtx = currentCanvas?.getContext("2d");
-      
-      if (!currentCanvas || !currentCtx) return;
+      const c = canvasRef.current;
+      if (!c) return;
+      const context = c.getContext("2d");
+      if (!context) return;
       
       const currentColumns = Math.floor(window.innerWidth / fontSize);
       if (currentColumns !== columns) {
@@ -37,23 +37,23 @@ export function MatrixRain() {
         drops = Array(columns).fill(1);
       }
 
-      currentCtx.fillStyle = "rgba(0, 0, 0, 0.05)";
-      currentCtx.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
+      context.fillStyle = "rgba(0, 0, 0, 0.05)";
+      context.fillRect(0, 0, c.width, c.height);
 
-      currentCtx.font = `${fontSize}px monospace`;
+      context.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
         const text = chars.charAt(Math.floor(Math.random() * chars.length));
         
         if (Math.random() > 0.95) {
-          currentCtx.fillStyle = "#00ff66";
+          context.fillStyle = "#00ff66";
         } else {
-          currentCtx.fillStyle = "#006622";
+          context.fillStyle = "#006622";
         }
 
-        currentCtx.fillText(text, i * fontSize, drops[i] * fontSize);
+        context.fillText(text, i * fontSize, drops[i] * fontSize);
 
-        if (drops[i] * fontSize > currentCanvas.height && Math.random() > 0.975) {
+        if (drops[i] * fontSize > c.height && Math.random() > 0.975) {
           drops[i] = 0;
         }
         drops[i]++;
