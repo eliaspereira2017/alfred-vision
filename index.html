@@ -77,13 +77,15 @@
             </p>
             
             <div class="mb-10 aspect-video max-w-2xl mx-auto glass-card p-1.5 border-neon/30 overflow-hidden shadow-xl">
-                <iframe 
-                    class="w-full h-full rounded-xl"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen
-                ></iframe>
+                <div class="w-full h-full rounded-xl bg-black flex items-center justify-center relative overflow-hidden group">
+                    <img src="/__l5e/assets-v1/ef1f92d2-7f83-4200-b2aa-569cd7102e78/home-automation.png" class="absolute inset-0 w-full h-full object-cover opacity-40 blur-sm" />
+                    <a href="https://drive.google.com/file/d/1xYGEFtHAMnylRxbWv18O6dlzUPRh2clh/view?usp=sharing" target="_blank" class="relative z-10 flex flex-col items-center gap-4 hover:scale-110 transition-transform">
+                        <div class="w-16 h-16 bg-neon/20 border border-neon rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,255,102,0.3)]">
+                            <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-black border-b-[10px] border-b-transparent ml-1"></div>
+                        </div>
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-neon">Assistir Vídeo Demonstrativo</span>
+                    </a>
+                </div>
             </div>
 
             <a href="https://alfredcursos.com.br/?ref=I107105867N" target="_blank" class="btn-neon text-base md:text-lg px-8 py-3">
@@ -114,10 +116,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="glass-card border-neon/30 aspect-square flex items-center justify-center text-center">
-                    <div>
-                        <div class="text-neon text-4xl mb-4">🏠</div>
-                        <p class="text-gray-500 font-bold uppercase tracking-widest text-sm">Preview de Integração Residencial</p>
+                <div class="glass-card border-neon/30 p-0 overflow-hidden relative group h-full">
+                    <img 
+                        src="/__l5e/assets-v1/ef1f92d2-7f83-4200-b2aa-569cd7102e78/home-automation.png" 
+                        alt="Automação Residencial ALFRED VISION" 
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <p class="text-[10px] font-black uppercase tracking-[0.2em] text-neon">Dashboard Alfred Vision Home</p>
                     </div>
                 </div>
             </div>
