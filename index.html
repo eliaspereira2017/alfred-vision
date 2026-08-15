@@ -30,21 +30,21 @@
         @layer base {
             html { scroll-behavior: smooth; }
             body { 
-                @apply bg-bg-dark text-white font-sans;
-                letter-spacing: -0.02em;
+                @apply bg-bg-dark text-white font-sans text-sm;
+                letter-spacing: -0.01em;
             }
             #lovable-badge { display: none !important; }
         }
 
         @layer components {
             .btn-neon {
-                @apply inline-block bg-neon text-black font-black uppercase px-8 py-4 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(0,255,102,0.3)] hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,102,0.6)] cursor-pointer no-underline text-center;
+                @apply inline-block bg-neon text-black font-black uppercase px-5 py-2.5 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(0,255,102,0.2)] hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,102,0.4)] cursor-pointer no-underline text-center text-xs;
             }
             .glass-card {
-                @apply bg-black/40 border border-neon/20 backdrop-blur-md rounded-[2rem] p-8 transition-all duration-300 hover:border-neon/50 hover:shadow-[0_0_30px_rgba(0,255,102,0.1)];
+                @apply bg-black/40 border border-neon/20 backdrop-blur-md rounded-2xl p-5 transition-all duration-300 hover:border-neon/50 hover:shadow-[0_0_20px_rgba(0,255,102,0.1)];
             }
             .compact-heading {
-                @apply font-black uppercase leading-[0.9] tracking-[-0.05em];
+                @apply font-black uppercase leading-[0.95] tracking-[-0.04em];
             }
         }
     </style>
@@ -53,7 +53,7 @@
     <!-- Background Canvas -->
     <canvas id="matrix" class="fixed inset-0 pointer-events-none opacity-20 z-0"></canvas>
 
-    <div class="relative z-10 flex flex-col min-h-screen max-w-[1200px] mx-auto border-x border-neon/5 bg-bg-dark shadow-[0_0_100px_rgba(0,0,0,0.8)]">
+    <div class="relative z-10 flex flex-col min-h-screen max-w-[900px] mx-auto border-x border-neon/5 bg-bg-dark shadow-[0_0_100px_rgba(0,0,0,0.8)]">
         <!-- Nav -->
         <nav class="sticky top-0 w-full bg-black/80 backdrop-blur-xl border-b border-neon/10 z-50">
             <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -68,17 +68,17 @@
         </nav>
 
         <!-- Hero -->
-        <header class="pt-20 pb-20 px-6 max-w-6xl mx-auto text-center">
-            <h1 class="text-5xl md:text-8xl compact-heading mb-8">
+        <header class="pt-16 pb-12 px-6 max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl compact-heading mb-4">
                 IA que <span class="text-neon">interage</span> como nos <span class="text-neon">filmes</span>
             </h1>
-            <p class="text-lg md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto font-medium">
+            <p class="text-sm md:text-base text-gray-400 mb-8 max-w-2xl mx-auto font-medium">
                 Seu próprio Alfred: enxerga o mundo, monitora sua tela e executa comandos por voz. <span class="text-white font-bold underline decoration-neon">Sem programar.</span>
             </p>
             
-            <div class="mb-16 aspect-video max-w-4xl mx-auto glass-card p-2 border-neon/30 overflow-hidden shadow-2xl">
+            <div class="mb-10 aspect-video max-w-2xl mx-auto glass-card p-1.5 border-neon/30 overflow-hidden shadow-xl">
                 <iframe 
-                    class="w-full h-full rounded-2xl"
+                    class="w-full h-full rounded-xl"
                     src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -86,37 +86,37 @@
                 ></iframe>
             </div>
 
-            <a href="https://alfredcursos.com.br/?ref=I107105867N" target="_blank" class="btn-neon text-xl md:text-2xl px-12">
+            <a href="https://alfredcursos.com.br/?ref=I107105867N" target="_blank" class="btn-neon text-base md:text-lg px-8 py-3">
                 CRIAR MEU ALFRED AGORA
             </a>
         </header>
 
         <!-- Casa Inteligente -->
-        <section id="casa-inteligente" class="py-24 border-y border-neon/10 bg-black/30">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <section id="casa-inteligente" class="py-16 border-y border-neon/10 bg-black/30">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                    <h2 class="text-4xl md:text-6xl compact-heading mb-8">O Cérebro da sua <span class="text-neon">Smart Home</span></h2>
-                    <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+                    <h2 class="text-3xl md:text-4xl compact-heading mb-4">O Cérebro da sua <span class="text-neon">Smart Home</span></h2>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
                         Esqueça comandos robóticos. Controle luzes, segurança e eletrodomésticos através de diálogos naturais ou visão computacional.
                     </p>
                     <div class="space-y-4">
-                        <div class="flex items-center gap-4 text-gray-300">
-                            <span class="text-neon font-bold text-2xl">✓</span>
+                        <div class="flex items-center gap-3 text-gray-300 text-xs">
+                            <span class="text-neon font-bold text-lg">✓</span>
                             <span>Integração total com dispositivos IoT (Zigbee, WiFi, etc)</span>
                         </div>
-                        <div class="flex items-center gap-4 text-gray-300">
-                            <span class="text-neon font-bold text-2xl">✓</span>
+                        <div class="flex items-center gap-3 text-gray-300 text-xs">
+                            <span class="text-neon font-bold text-lg">✓</span>
                             <span>Automação baseada em reconhecimento de gestos e rostos</span>
                         </div>
-                        <div class="flex items-center gap-4 text-gray-300">
-                            <span class="text-neon font-bold text-2xl">✓</span>
+                        <div class="flex items-center gap-3 text-gray-300 text-xs">
+                            <span class="text-neon font-bold text-lg">✓</span>
                             <span>Rotinas inteligentes que aprendem com seu comportamento</span>
                         </div>
                     </div>
                 </div>
                 <div class="glass-card border-neon/30 aspect-square flex items-center justify-center text-center">
                     <div>
-                        <div class="text-neon text-6xl mb-6">🏠</div>
+                        <div class="text-neon text-4xl mb-4">🏠</div>
                         <p class="text-gray-500 font-bold uppercase tracking-widest text-sm">Preview de Integração Residencial</p>
                     </div>
                 </div>
@@ -124,55 +124,55 @@
         </section>
 
         <!-- Recursos -->
-        <section id="recursos" class="py-32 px-6 max-w-7xl mx-auto">
-            <h2 class="text-4xl md:text-6xl compact-heading mb-20 text-center tracking-tighter">Recursos <span class="text-neon">Elite</span></h2>
-            <div class="grid md:grid-cols-3 gap-8">
+        <section id="recursos" class="py-20 px-6 max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl compact-heading mb-12 text-center tracking-tighter">Recursos <span class="text-neon">Elite</span></h2>
+            <div class="grid md:grid-cols-3 gap-6">
                 <div class="glass-card group">
-                    <div class="text-neon text-4xl mb-6 group-hover:scale-110 transition-transform">👁️</div>
-                    <h3 class="text-xl font-bold mb-4 text-neon uppercase tracking-tighter">Visão Computacional</h3>
+                    <div class="text-neon text-3xl mb-4 group-hover:scale-110 transition-transform">👁️</div>
+                    <h3 class="text-base font-bold mb-3 text-neon uppercase tracking-tighter">Visão Computacional</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Identifica objetos, pessoas e comportamentos em tempo real para ações proativas e seguras.</p>
                 </div>
                 <div class="glass-card group">
-                    <div class="text-neon text-4xl mb-6 group-hover:scale-110 transition-transform">🖥️</div>
-                    <h3 class="text-xl font-bold mb-4 text-neon uppercase tracking-tighter">Interpretação de Tela</h3>
+                    <div class="text-neon text-3xl mb-4 group-hover:scale-110 transition-transform">🖥️</div>
+                    <h3 class="text-base font-bold mb-3 text-neon uppercase tracking-tighter">Interpretação de Tela</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">O Alfred entende o que você está fazendo no PC e te auxilia em tarefas repetitivas ou complexas.</p>
                 </div>
                 <div class="glass-card group">
-                    <div class="text-neon text-4xl mb-6 group-hover:scale-110 transition-transform">🎙️</div>
-                    <h3 class="text-xl font-bold mb-4 text-neon uppercase tracking-tighter">Comandos de Voz</h3>
+                    <div class="text-neon text-3xl mb-4 group-hover:scale-110 transition-transform">🎙️</div>
+                    <h3 class="text-base font-bold mb-3 text-neon uppercase tracking-tighter">Comandos de Voz</h3>
                     <h3 class="hidden">Comandos de Voz</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Dialogue com sua IA de forma fluida. Sem "Ok Google", apenas conversas como entre humanos.</p>
                 </div>
                 <div class="glass-card group">
-                    <div class="text-neon text-4xl mb-6 group-hover:scale-110 transition-transform">🧠</div>
-                    <h3 class="text-xl font-bold mb-4 text-neon uppercase tracking-tighter">Memória Cognitiva</h3>
+                    <div class="text-neon text-3xl mb-4 group-hover:scale-110 transition-transform">🧠</div>
+                    <h3 class="text-base font-bold mb-3 text-neon uppercase tracking-tighter">Memória Cognitiva</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Ele lembra das suas preferências, projetos e conversas passadas para um auxílio verdadeiramente único.</p>
                 </div>
                 <div class="glass-card group">
-                    <div class="text-neon text-4xl mb-6 group-hover:scale-110 transition-transform">⚡</div>
-                    <h3 class="text-xl font-bold mb-4 text-neon uppercase tracking-tighter">Automação No-Code</h3>
+                    <div class="text-neon text-3xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
+                    <h3 class="text-base font-bold mb-3 text-neon uppercase tracking-tighter">Automação No-Code</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Configure fluxos de trabalho poderosos arrastando blocos. Do Windows à sua Cafeteira.</p>
                 </div>
                 <div class="glass-card group">
-                    <div class="text-neon text-4xl mb-6 group-hover:scale-110 transition-transform">🛡️</div>
-                    <h3 class="text-xl font-bold mb-4 text-neon uppercase tracking-tighter">Privacidade Total</h3>
+                    <div class="text-neon text-3xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
+                    <h3 class="text-base font-bold mb-3 text-neon uppercase tracking-tighter">Privacidade Total</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Seus dados são seus. Configure sua IA para rodar localmente ou com criptografia de ponta.</p>
                 </div>
             </div>
         </section>
 
         <!-- Oferta -->
-        <section id="oferta" class="py-32 px-6 max-w-4xl mx-auto text-center">
-            <div class="bg-gradient-to-b from-black to-neon/5 border-2 border-neon p-12 md:p-24 rounded-[3.5rem] shadow-[0_0_80px_rgba(0,255,102,0.1)] relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-neon text-black font-black px-8 py-2 text-xs -rotate-45 translate-x-12 translate-y-8 uppercase">Vagas Limitadas</div>
-                <span class="text-neon font-black tracking-[0.4em] uppercase mb-10 block text-xs">Acesso Vitalício + Bônus</span>
-                <h2 class="text-4xl md:text-7xl compact-heading mb-6">Oferta <span class="text-neon">Elite</span></h2>
-                <div class="mb-12">
-                    <p class="text-gray-500 line-through text-2xl mb-2 font-bold italic">R$ 399,00</p>
-                    <p class="text-6xl md:text-9xl compact-heading text-neon leading-none mb-4">12x R$ 20,37</p>
-                    <p class="text-2xl text-gray-400 font-bold uppercase tracking-widest">ou R$ 197,00 à vista</p>
+        <section id="oferta" class="py-20 px-6 max-w-2xl mx-auto text-center">
+            <div class="bg-gradient-to-b from-black to-neon/5 border border-neon p-10 md:p-16 rounded-[2.5rem] shadow-[0_0_60px_rgba(0,255,102,0.1)] relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-neon text-black font-black px-6 py-1.5 text-[8px] -rotate-45 translate-x-10 translate-y-6 uppercase">Vagas Limitadas</div>
+                <span class="text-neon font-black tracking-[0.4em] uppercase mb-6 block text-[10px]">Acesso Vitalício + Bônus</span>
+                <h2 class="text-3xl md:text-5xl compact-heading mb-4">Oferta <span class="text-neon">Elite</span></h2>
+                <div class="mb-8">
+                    <p class="text-gray-500 line-through text-lg mb-1 font-bold italic">R$ 399,00</p>
+                    <p class="text-5xl md:text-7xl compact-heading text-neon leading-none mb-3">12x R$ 20,37</p>
+                    <p class="text-lg text-gray-400 font-bold uppercase tracking-widest">ou R$ 197,00 à vista</p>
                 </div>
-                <a href="https://alfredcursos.com.br/?ref=I107105867N" target="_blank" class="btn-neon w-full md:w-auto text-2xl px-16 py-8">
+                <a href="https://alfredcursos.com.br/?ref=I107105867N" target="_blank" class="btn-neon w-full md:w-auto text-lg px-12 py-5">
                     GARANTIR MEU ALFRED
                 </a>
                 <div class="mt-16 flex flex-wrap justify-center gap-10 text-[10px] font-black text-gray-500 uppercase tracking-[0.2em]">
@@ -196,6 +196,15 @@
     </div>
 
     <script>
+        // Ensure page loads at top
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
         
