@@ -11,9 +11,10 @@ export function MatrixRain() {
     if (!ctx) return;
 
     const updateSize = () => {
-      if (!canvas) return;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const currentCanvas = canvasRef.current;
+      if (!currentCanvas) return;
+      currentCanvas.width = window.innerWidth;
+      currentCanvas.height = window.innerHeight;
     };
 
     updateSize();
@@ -25,32 +26,34 @@ export function MatrixRain() {
     let drops: number[] = Array(columns).fill(1);
 
     const draw = () => {
-      if (!ctx || !canvas) return;
+      const currentCanvas = canvasRef.current;
+      const currentCtx = currentCanvas?.getContext("2d");
       
-      // If window was resized, adjust columns
+      if (!currentCanvas || !currentCtx) return;
+      
       const currentColumns = Math.floor(window.innerWidth / fontSize);
       if (currentColumns !== columns) {
         columns = currentColumns;
         drops = Array(columns).fill(1);
       }
 
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      currentCtx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      currentCtx.fillRect(0, 0, currentCanvas.width, currentCanvas.height);
 
-      ctx.font = `${fontSize}px monospace`;
+      currentCtx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
         const text = chars.charAt(Math.floor(Math.random() * chars.length));
         
         if (Math.random() > 0.95) {
-          ctx.fillStyle = "#00ff66";
+          currentCtx.fillStyle = "#00ff66";
         } else {
-          ctx.fillStyle = "#006622";
+          currentCtx.fillStyle = "#006622";
         }
 
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        currentCtx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        if (drops[i] * fontSize > currentCanvas.height && Math.random() > 0.975) {
           drops[i] = 0;
         }
         drops[i]++;
