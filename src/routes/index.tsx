@@ -24,6 +24,7 @@ function Index() {
     { title: "Visão Computacional", desc: "Identifica objetos, pessoas e ações em tempo real através da sua câmera." },
     { title: "Interpretação de Tela", desc: "Analisa o que está acontecendo na sua tela para automação inteligente." },
     { title: "Conversação e Escrita", desc: "Interage via voz ou texto com naturalidade e contexto avançado." },
+    { title: "Casa Inteligente", desc: "Controle luzes, ar-condicionado e dispositivos IoT diretamente pelo Alfred via voz ou visão." },
     { title: "Memória Persistente", desc: "Lembra das suas preferências e conversas anteriores para um serviço personalizado." },
     { title: "Automação por Voz", desc: "Execute comandos complexos no Windows apenas falando." }
   ];
@@ -31,6 +32,7 @@ function Index() {
   const faqs = [
     { q: "Preciso saber programar?", a: "Absolutamente não! O curso é focado em ferramentas no-code e configurações simples para que qualquer pessoa consiga criar seu assistente." },
     { q: "O acesso é vitalício?", a: "Sim, uma vez adquirido, o curso e as atualizações são seus para sempre." },
+    { q: "Funciona com dispositivos inteligentes?", a: "Sim! O Alfred pode ser integrado com sistemas de automação residencial, permitindo controlar sua casa por comandos de voz ou gestos captados pela visão computacional." },
     { q: "Como funciona o suporte?", a: "Temos um grupo exclusivo de alunos e suporte direto para tirar todas as suas dúvidas durante a criação do seu Alfred." }
   ];
 
@@ -83,6 +85,41 @@ function Index() {
         >
           QUERO CRIAR MEU ALFRED
         </a>
+      </section>
+
+      {/* Casa Inteligente Section */}
+      <section className="py-24 relative z-10 bg-gradient-to-r from-black via-[#00ff66]/5 to-black border-y border-[#00ff66]/10">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/2">
+              <h2 className="text-4xl md:text-5xl font-black mb-8 tracking-tighter uppercase leading-none">
+                O Cérebro da sua <span className="text-[#00ff66]">CASA INTELIGENTE</span>
+              </h2>
+              <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+                Imagine controlar luzes, temperatura, câmeras de segurança e aparelhos domésticos com um simples comando de voz ou até mesmo através da detecção de presença e gestos.
+              </p>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex items-center gap-3">
+                  <span className="text-[#00ff66]">▶</span> Integração direta com sistemas IoT e assistentes domésticos.
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-[#00ff66]">▶</span> Automação baseada em visão: o Alfred reconhece quando você entra na sala.
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-[#00ff66]">▶</span> Comandos personalizados para rotinas complexas de segurança e conforto.
+                </li>
+              </ul>
+            </div>
+            <div className="md:w-1/2 bg-[#111] border border-[#00ff66]/30 p-8 rounded-3xl shadow-[0_0_40px_rgba(0,255,102,0.1)]">
+              <div className="aspect-video bg-black/50 rounded-xl flex items-center justify-center border border-dashed border-[#00ff66]/20">
+                <div className="text-center">
+                  <div className="text-[#00ff66] text-4xl mb-4">🏠</div>
+                  <p className="text-sm font-bold uppercase tracking-widest text-gray-500">Visualização de Automação Residencial</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Recursos */}
