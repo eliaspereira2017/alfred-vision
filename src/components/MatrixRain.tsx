@@ -54,13 +54,15 @@ export function MatrixRain() {
           context.fillStyle = "#006622";
         }
 
-        context.fillText(text, i * fontSize, (drops[i] ?? 0) * fontSize);
+        const dropY = drops[i];
+        if (dropY !== undefined) {
+          context.fillText(text, i * fontSize, dropY * fontSize);
 
-        if ((drops[i] ?? 0) * fontSize > currentHeight && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        if (drops[i] !== undefined) {
-          drops[i]++;
+          if (dropY * fontSize > currentHeight && Math.random() > 0.975) {
+            drops[i] = 0;
+          } else {
+            drops[i] = dropY + 1;
+          }
         }
       }
     };
