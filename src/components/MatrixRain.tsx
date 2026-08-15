@@ -10,23 +10,37 @@ export function MatrixRain() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     const fontSize = 14;
-    const columns = canvas.width / fontSize;
-    const drops: number[] = Array(Math.floor(columns)).fill(1);
+    const columns = Math.floor(window.innerWidth / fontSize);
+    const drops: number[] = Array(columns).fill(1);
 
     const draw = () => {
+      if (!ctx) return;
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#00ff66";
+      ctx.fillStyle = "#003311"; // Darker green for trail
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
         const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        
+        // Randomly make some characters brighter neon green
+        if (Math.random() > 0.95) {
+          ctx.fillStyle = "#00ff66";
+        } else {
+          ctx.fillStyle = "#006622";
+        }
+
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -37,13 +51,16 @@ export function MatrixRain() {
     };
 
     const interval = setInterval(draw, 50);
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 z-0 pointer-events-none opacity-20"
+      className="fixed inset-0 z-0 pointer-events-none opacity-30"
     />
   );
 }
