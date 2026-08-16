@@ -1,12 +1,18 @@
 FROM nginx:alpine
+
 # Remove default nginx static assets
 RUN rm -rf /usr/share/nginx/html/*
-# Copy static assets over
+
+# Copy only the static files needed for a pure HTML site
 COPY index.html /usr/share/nginx/html/index.html
-# Standard images like our current assets might be needed if they are referenced
-# But since everything is in index.html, we just need the file.
-# If there are assets in a directory, we should copy them too.
-# For now, copying everything to be safe since I saw relative image paths.
+
+# Copy other assets if needed (like images referenced in index.html)
+# Since the user mentioned using images, we copy the root to catch them
 COPY . /usr/share/nginx/html/
+
+# Expose port 80
 EXPOSE 80
+
+# The default Nginx configuration already points to /usr/share/nginx/html
+# and serves index.html by default.
 CMD ["nginx", "-g", "daemon off;"]
