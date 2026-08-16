@@ -98,7 +98,7 @@ function Index() {
             <a href="#oferta" className="hover:text-[#00ff66] transition-colors">Oferta</a>
             <a href="#faq" className="hover:text-[#00ff66] transition-colors">FAQ</a>
           </div>
-          <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-b from-transparent to-black border border-[#00ff66] text-[#00ff66] px-4 py-1.5 rounded-full hover:from-[#00ff66] hover:to-[#006629] hover:text-black transition-all font-bold text-[10px] uppercase">
+          <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-b from-transparent to-black border border-[#00ff66] text-[#00ff66] px-4 py-1.5 rounded-full hover:from-[#00ff66] hover:to-[#006629] hover:text-black transition-all font-bold text-[10px] uppercase !flex">
             QUERO O MEU
           </a>
         </div>
@@ -158,7 +158,7 @@ function Index() {
           href={ctaLink} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="inline-block bg-[#00ff66] text-black font-black text-2xl px-12 py-6 rounded-full hover:shadow-[0_0_40px_rgba(0,255,102,0.8)] transition-all transform hover:scale-105 uppercase tracking-tighter"
+          className="inline-block bg-[#00ff66] text-black font-black text-2xl px-12 py-6 rounded-full hover:shadow-[0_0_40px_rgba(0,255,102,0.8)] transition-all transform hover:scale-105 uppercase tracking-tighter !inline-block"
         >
           QUERO CRIAR MEU ALFRED
         </a>
@@ -236,7 +236,7 @@ function Index() {
             href={ctaLink} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="w-auto inline-block bg-gradient-to-b from-[#00ff66] to-[#006629] text-black font-black text-[12px] px-8 py-3 rounded-2xl hover:shadow-[0_0_50px_rgba(0,255,102,0.6)] transition-all transform hover:scale-105 uppercase"
+            className="w-auto inline-block bg-gradient-to-b from-[#00ff66] to-[#006629] text-black font-black text-[12px] px-8 py-3 rounded-2xl hover:shadow-[0_0_50px_rgba(0,255,102,0.6)] transition-all transform hover:scale-105 uppercase !inline-block"
           >
             GARANTIR MINHA VAGA AGORA
           </a>
