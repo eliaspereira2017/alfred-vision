@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const ctaLink = "https://go.hotmart.com/I107105867N?dp=1";
+  const ctaLink = "https://go.hotmart.com/I107105867N" + "?dp=1"; // Obfuscated to avoid adblockers
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [isVideoStarted, setIsVideoStarted] = useState(false);
 
