@@ -113,17 +113,33 @@ function Index() {
         </p>
         
         <div className="mb-16 aspect-[9/16] max-w-[340px] mx-auto bg-black/50 border border-[#00ff66]/20 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] relative group">
-          <iframe 
-            width="100%" 
-            height="100%" 
-            src="https://www.youtube.com/embed/0DshbSYIeuI" 
-            title="Alfred Vision" 
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerPolicy="strict-origin-when-cross-origin" 
-            allowFullScreen
-            className="absolute inset-0 w-full h-full"
-          ></iframe>
+          <div className="absolute inset-0 z-0">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/0DshbSYIeuI?autoplay=1&mute=1&controls=0&loop=1&playlist=0DshbSYIeuI" 
+              title="Alfred Vision Preview" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              className="w-full h-full object-cover scale-150"
+            ></iframe>
+          </div>
+          <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center">
+            <div className="w-20 h-20 bg-[#00ff66] rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(0,255,102,0.5)] group-hover:scale-110 transition-transform cursor-pointer">
+              <svg className="w-10 h-10 text-black fill-current" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            <div className="absolute bottom-8 left-0 w-full text-center">
+              <span className="text-[#00ff66] font-black uppercase tracking-widest text-xs drop-shadow-md">Clique para assistir</span>
+            </div>
+          </div>
+          <a 
+            href="https://www.youtube.com/watch?v=0DshbSYIeuI" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="absolute inset-0 z-20"
+          ></a>
         </div>
 
         <a 
