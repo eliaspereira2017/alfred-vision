@@ -112,15 +112,18 @@ function Index() {
           Capaz de enxergar o mundo em tempo real, monitorar sua tela e controlar o computador por voz. <span className="text-white font-bold underline decoration-[#00ff66]">Sem precisar programar.</span>
         </p>
         
-        <div className="mb-16 max-w-4xl mx-auto aspect-video bg-black/50 border border-[#00ff66]/20 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] flex items-center justify-center relative group">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#00ff66]/10 to-transparent pointer-events-none"></div>
-          <img src="/__l5e/assets-v1/ef1f92d2-7f83-4200-b2aa-569cd7102e78/home-automation.png" className="absolute inset-0 w-full h-full object-cover opacity-40 blur-sm" />
-          <a href="https://drive.google.com/file/d/1xYGEFtHAMnylRxbWv18O6dlzUPRh2clh/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="relative z-10 flex flex-col items-center gap-4 hover:scale-110 transition-transform">
-            <div className="w-16 h-16 bg-[#00ff66]/20 border border-[#00ff66] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,255,102,0.3)]">
-              <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-black border-b-[10px] border-b-transparent ml-1"></div>
-            </div>
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#00ff66]">Assistir Vídeo Demonstrativo</span>
-          </a>
+        <div className="mb-16 aspect-[9/16] max-w-[340px] mx-auto bg-black/50 border border-[#00ff66]/20 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] relative group">
+          <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/0DshbSYIeuI" 
+            title="Alfred Vision" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerPolicy="strict-origin-when-cross-origin" 
+            allowFullScreen
+            className="absolute inset-0 w-full h-full"
+          ></iframe>
         </div>
 
         <a 
