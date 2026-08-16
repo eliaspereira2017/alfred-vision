@@ -112,35 +112,42 @@ function Index() {
           Capaz de enxergar o mundo em tempo real, monitorar sua tela e controlar o computador por voz. <span className="text-white font-bold underline decoration-[#00ff66]">Sem precisar programar.</span>
         </p>
         
-        <div className="mb-16 aspect-[9/16] max-w-[340px] mx-auto bg-black/50 border border-[#00ff66]/20 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] relative group">
-          <div className="absolute inset-0 z-0">
-            <iframe 
-              width="100%" 
-              height="100%" 
-              src="https://www.youtube.com/embed/0DshbSYIeuI?autoplay=1&mute=1&controls=0&loop=1&playlist=0DshbSYIeuI" 
-              title="Alfred Vision Preview" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              className="w-full h-full object-cover scale-150"
-            ></iframe>
-          </div>
-          <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center">
-            <div className="w-20 h-20 bg-[#00ff66] rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(0,255,102,0.5)] group-hover:scale-110 transition-transform cursor-pointer">
-              <svg className="w-10 h-10 text-black fill-current" viewBox="0 0 24 24">
+        <div className="mb-16 aspect-[9/16] max-w-[340px] mx-auto bg-black/50 border border-[#00ff66]/20 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,255,102,0.5)] relative group">
+          <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/0DshbSYIeuI?autoplay=0&rel=0&modestbranding=1" 
+            title="Alfred Vision" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerPolicy="strict-origin-when-cross-origin" 
+            allowFullScreen
+            className="absolute inset-0 w-full h-full z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          ></iframe>
+          
+          {/* Futuristic Overlay/Preview */}
+          <div className="absolute inset-0 z-0 bg-black flex flex-col items-center justify-center group-hover:z-[-1] transition-all duration-500">
+            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#00ff66]/20 via-transparent to-transparent"></div>
+            <div className="w-20 h-20 border-2 border-[#00ff66] rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(0,255,102,0.5)] animate-pulse mb-4">
+              <svg className="w-10 h-10 text-[#00ff66] fill-current" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg>
             </div>
-            <div className="absolute bottom-8 left-0 w-full text-center">
-              <span className="text-[#00ff66] font-black uppercase tracking-widest text-xs drop-shadow-md">Clique para assistir</span>
+            <span className="text-[#00ff66] font-black uppercase tracking-[0.3em] text-[10px] animate-pulse">Vision Interface Activating...</span>
+            <div className="absolute bottom-4 w-full px-8 opacity-50">
+              <div className="h-0.5 bg-[#00ff66]/20 w-full">
+                <div className="h-full bg-[#00ff66] w-1/3 animate-[loading_2s_infinite]"></div>
+              </div>
             </div>
           </div>
-          <a 
-            href="https://www.youtube.com/watch?v=0DshbSYIeuI" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="absolute inset-0 z-20"
-          ></a>
         </div>
+
+        <style>{`
+          @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(300%); }
+          }
+        `}</style>
 
         <a 
           href={ctaLink} 
