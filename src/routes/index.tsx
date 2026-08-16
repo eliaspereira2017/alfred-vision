@@ -17,9 +17,12 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const ctaLink = "https://go.hotmart.com/I107105867N" + "?dp=1"; // Obfuscated to avoid adblockers
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [isVideoStarted, setIsVideoStarted] = useState(false);
+
+  const handleCtaClick = () => {
+    window.open("https://go.hotmart.com/I107105867N?dp=1", "_blank", "noopener,noreferrer");
+  };
 
   const features = [
     { 
@@ -98,9 +101,9 @@ function Index() {
             <a href="#oferta" className="hover:text-[#00ff66] transition-colors">Oferta</a>
             <a href="#faq" className="hover:text-[#00ff66] transition-colors">FAQ</a>
           </div>
-          <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-b from-transparent to-black border border-[#00ff66] text-[#00ff66] px-4 py-1.5 rounded-full hover:from-[#00ff66] hover:to-[#006629] hover:text-black transition-all font-bold text-[10px] uppercase !flex">
+          <button onClick={handleCtaClick} className="bg-gradient-to-b from-transparent to-black border border-[#00ff66] text-[#00ff66] px-4 py-1.5 rounded-full hover:from-[#00ff66] hover:to-[#006629] hover:text-black transition-all font-bold text-[10px] uppercase cursor-pointer">
             QUERO O MEU
-          </a>
+          </button>
         </div>
       </nav>
 
@@ -154,14 +157,12 @@ function Index() {
           }
         `}</style>
 
-        <a 
-          href={ctaLink} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="inline-block bg-[#00ff66] text-black font-black text-2xl px-12 py-6 rounded-full hover:shadow-[0_0_40px_rgba(0,255,102,0.8)] transition-all transform hover:scale-105 uppercase tracking-tighter !inline-block"
+        <button 
+          onClick={handleCtaClick}
+          className="inline-block bg-[#00ff66] text-black font-black text-2xl px-12 py-6 rounded-full hover:shadow-[0_0_40px_rgba(0,255,102,0.8)] transition-all transform hover:scale-105 uppercase tracking-tighter cursor-pointer"
         >
           QUERO CRIAR MEU ALFRED
-        </a>
+        </button>
       </section>
 
       {/* Casa Inteligente Section */}
@@ -232,14 +233,12 @@ function Index() {
             <p className="text-base text-gray-400 mt-2 font-bold uppercase tracking-widest">ou R$ 197,00 à vista</p>
           </div>
 
-          <a 
-            href={ctaLink} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="w-auto inline-block bg-gradient-to-b from-[#00ff66] to-[#006629] text-black font-black text-[12px] px-8 py-3 rounded-2xl hover:shadow-[0_0_50px_rgba(0,255,102,0.6)] transition-all transform hover:scale-105 uppercase !inline-block"
+          <button 
+            onClick={handleCtaClick}
+            className="w-auto inline-block bg-gradient-to-b from-[#00ff66] to-[#006629] text-black font-black text-[12px] px-8 py-3 rounded-2xl hover:shadow-[0_0_50px_rgba(0,255,102,0.6)] transition-all transform hover:scale-105 uppercase cursor-pointer"
           >
             GARANTIR MINHA VAGA AGORA
-          </a>
+          </button>
           
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm font-bold text-gray-500 uppercase tracking-widest">
             <span>✓ Acesso Imediato</span>
