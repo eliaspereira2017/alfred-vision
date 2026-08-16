@@ -192,6 +192,7 @@ function Index() {
                 src="/sala.png" 
                 alt="Dashboard Alfred" 
                 className="w-full h-auto block transition-all duration-500"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
             </div>
