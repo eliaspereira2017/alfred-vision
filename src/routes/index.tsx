@@ -189,7 +189,7 @@ function Index() {
             </div>
             <div className="md:w-1/2 glass-card border-[#00ff66]/30 p-0 overflow-hidden relative group">
               <img 
-                src="/__l5e/assets-v1/ef1f92d2-7f83-4200-b2aa-569cd7102e78/home-automation.png" 
+                src="/dashboard.png" 
                 alt="Dashboard Alfred" 
                 className="w-full h-auto block transition-all duration-500"
               />
