@@ -113,7 +113,9 @@ function Index() {
           Crie um assistente de IA que interage com você como nos <span className="text-[#00ff66] drop-shadow-[0_0_15px_rgba(0,255,102,0.5)]">FILMES</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Capaz de enxergar o mundo em tempo real, monitorar sua tela e controlar o computador por voz. <span className="text-white font-bold underline decoration-[#00ff66]">Sem precisar programar.</span>
+          Capaz de <span className="text-[#00ff66] font-bold">enxergar o mundo</span> em tempo real, tela do computador, conversar naturalmente, escrever textos e automações inteligentes. <span className="text-[#00ff66] font-bold">Tudo por voz</span>
+          <br /><br />
+          Não é necessário ter conhecimento em programação
         </p>
         
         <div className="mb-16 aspect-[9/16] max-w-[340px] mx-auto bg-black/50 border border-[#00ff66]/20 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] relative group">
@@ -215,6 +217,15 @@ function Index() {
                 <p className="text-gray-400 leading-relaxed">{f.desc}</p>
               </div>
             ))}
+          </div>
+          
+          <div className="mt-20 max-w-3xl mx-auto text-center border-t border-[#00ff66]/10 pt-16">
+            <h3 className="text-3xl font-black mb-8 tracking-tighter uppercase text-white">Mas isso já não existe?</h3>
+            <div className="space-y-6 text-xl text-gray-400 leading-relaxed">
+              <p>A maioria das IAs disponíveis são plataformas prontas e caras. Você utiliza apenas os recursos prontos que elas oferecem.</p>
+              <p className="text-white font-bold">Com o ALFRED é diferente.</p>
+              <p>Você vai ter um assistente de IA surpreendente, utilizando uma das tecnologias mais avançadas da atualidade, capaz de interagir com você em tempo real enquanto trabalha, navega, joga ou estuda — como nos filmes</p>
+            </div>
           </div>
         </div>
       </section>
